@@ -1,24 +1,34 @@
 @font-face {
   font-family: "Figtree";
   src: url("./assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+  font-weight: 500 800;
 }
 
 * {
   box-sizing: border-box;
 }
 
+html,
 body {
   margin: 0;
+  min-height: 100%;
+}
+
+body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 24px;
   background: hsl(47, 88%, 63%);
+  color: hsl(0, 0%, 7%);
   font-family: "Figtree", sans-serif;
+  font-size: 16px;
 }
 
 .card {
-  width: 384px;
+  width: 100%;
+  max-width: 384px;
   padding: 24px;
   background: hsl(0, 0%, 100%);
   border: 1px solid hsl(0, 0%, 7%);
@@ -38,21 +48,27 @@ body {
   padding: 4px 12px;
   background: hsl(47, 88%, 63%);
   border-radius: 4px;
+  font-size: 14px;
   font-weight: 800;
 }
 
 .published {
   margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 500;
 }
 
-h1 {
+.title {
   margin: 0 0 12px;
   font-size: 24px;
+  font-weight: 800;
+  line-height: 1.25;
 }
 
 .description {
   margin: 0 0 24px;
   color: hsl(0, 0%, 42%);
+  font-weight: 500;
   line-height: 1.5;
 }
 
@@ -60,9 +76,31 @@ h1 {
   display: flex;
   align-items: center;
   gap: 12px;
+  font-size: 14px;
+  font-weight: 800;
 }
 
 .author img {
   width: 32px;
   height: 32px;
+}
+
+@media (max-width: 375px) {
+  .card {
+    max-width: 327px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .category,
+  .published,
+  .author {
+    font-size: 12px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
 }
