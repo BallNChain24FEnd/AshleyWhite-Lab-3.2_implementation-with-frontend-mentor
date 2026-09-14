@@ -1,20 +1,68 @@
+@font-face {
+  font-family: "Figtree";
+  src: url("./assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: hsl(47, 88%, 63%);
-  font-family: Arial, sans-serif;
+  font-family: "Figtree", sans-serif;
 }
 
 .card {
-  width: 350px;
-  margin: 80px auto;
-  padding: 20px;
-  background: white;
+  width: 384px;
+  padding: 24px;
+  background: hsl(0, 0%, 100%);
+  border: 1px solid hsl(0, 0%, 7%);
+  border-radius: 20px;
+  box-shadow: 8px 8px 0 hsl(0, 0%, 7%);
 }
 
 .article-image {
+  display: block;
   width: 100%;
+  border-radius: 10px;
+}
+
+.category {
+  display: inline-block;
+  margin: 24px 0 12px;
+  padding: 4px 12px;
+  background: hsl(47, 88%, 63%);
+  border-radius: 4px;
+  font-weight: 800;
+}
+
+.published {
+  margin: 0 0 12px;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: 24px;
+}
+
+.description {
+  margin: 0 0 24px;
+  color: hsl(0, 0%, 42%);
+  line-height: 1.5;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .author img {
   width: 32px;
+  height: 32px;
 }
